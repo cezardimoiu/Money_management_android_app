@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <gradient
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:angle="90"
+                android:endColor="#ffe6cc"
+                android:startColor="@color/low_background"
+                android:type="linear" />
+        </shape>
+    </item>
+</selector>

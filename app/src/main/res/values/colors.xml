@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bgcolor">#E2E4F6</color>
+    <color name="cameo_pink">#DBAFC1</color>
+    <color name="black_coral">#56667A</color>
+    <color name="orange_crayola">#FF6D33</color>
+    <color name="peach_nougat">#E5AE8E</color>
+    <color name="low_background">#EAE2DD</color>
 </resources>
