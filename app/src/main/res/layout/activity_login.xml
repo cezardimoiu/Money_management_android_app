@@ -50,11 +50,13 @@
 
     <EditText
         android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="45dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint=" email"
         android:inputType="textEmailAddress"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,10 +75,13 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:ems="10"
+        android:hint=" password"
         android:inputType="textPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEmail"
         app:layout_constraintStart_toStartOf="@+id/textViewEmail"
         app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
@@ -94,11 +99,12 @@
 
     <TextView
         android:id="@+id/signUpText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
 
         android:layout_marginBottom="40dp"
         android:text="Sign Up"
+        android:textAlignment="center"
         android:textColor="#ff751a"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -113,6 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:text="Don't have an account?"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/signUpText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -122,9 +129,10 @@
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rounded_corners"
         android:text="Login"
+        android:textAllCaps="false"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"

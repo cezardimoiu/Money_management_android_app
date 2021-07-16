@@ -4,31 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+public class RegisterActivity extends AppCompatActivity {
 
-public class LoginActivity extends AppCompatActivity {
-
-    private TextView signUpText;
+    private TextView signInText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
-        signUpText = (TextView) findViewById(R.id.signUpText);
+        signInText = (TextView) findViewById(R.id.signInText);
 
 
-        signUpText.setOnClickListener(new View.OnClickListener() {
+        signInText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
-
     }
 }
