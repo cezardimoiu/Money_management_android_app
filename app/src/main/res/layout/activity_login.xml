@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewLogin" />
 
     <EditText
-        android:id="@+id/textViewEmail"
+        android:id="@+id/textViewEmailLogin"
         android:layout_width="216dp"
         android:layout_height="45dp"
         android:layout_marginTop="40dp"
@@ -69,21 +69,21 @@
         android:layout_marginTop="47dp"
         android:scaleX="0.75"
         android:scaleY="0.75"
-        app:layout_constraintEnd_toStartOf="@+id/textViewEmail"
+        app:layout_constraintEnd_toStartOf="@+id/textViewEmailLogin"
         app:layout_constraintTop_toBottomOf="@+id/textViewLogin2"
         app:srcCompat="@drawable/email" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextTextPasswordLogin"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:ems="10"
         android:hint=" password"
         android:inputType="textPassword"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewEmail"
-        app:layout_constraintStart_toStartOf="@+id/textViewEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewEmailLogin"
+        app:layout_constraintStart_toStartOf="@+id/textViewEmailLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailLogin" />
 
     <ImageView
         android:id="@+id/imageViewPassword"
@@ -92,8 +92,8 @@
         android:layout_marginTop="5dp"
         android:scaleX="0.75"
         android:scaleY="0.75"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPasswordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailLogin"
         app:srcCompat="@drawable/padlock" />
 
 
@@ -126,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
@@ -134,8 +134,8 @@
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPasswordLogin"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPasswordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

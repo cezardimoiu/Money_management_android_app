@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746364675326",
+    "project_id": "money-management-app-aae91",
+    "storage_bucket": "money-management-app-aae91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746364675326:android:ded211a8f8561fae2ff1af",
+        "android_client_info": {
+          "package_name": "com.example.money_management_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746364675326-ft76tjb6j32hm7766absb177ff5p91id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlDFU_iMQ9MuEjSZlNYEv2eKMWsRTAdkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746364675326-ft76tjb6j32hm7766absb177ff5p91id.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

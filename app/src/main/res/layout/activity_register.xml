@@ -38,7 +38,7 @@ tools:context=".RegisterActivity">
     app:srcCompat="@drawable/wallet" />
 
     <EditText
-        android:id="@+id/textViewEmail"
+        android:id="@+id/textViewEmailRegister"
         android:layout_width="216dp"
         android:layout_height="45dp"
         android:layout_marginTop="60dp"
@@ -58,7 +58,7 @@ tools:context=".RegisterActivity">
     android:layout_marginTop="64dp"
     android:scaleX="0.75"
     android:scaleY="0.75"
-    app:layout_constraintEnd_toStartOf="@+id/textViewEmail"
+    app:layout_constraintEnd_toStartOf="@+id/textViewEmailRegister"
     app:layout_constraintTop_toBottomOf="@+id/textViewLogin"
     app:srcCompat="@drawable/email" />
 
@@ -69,21 +69,21 @@ tools:context=".RegisterActivity">
     android:layout_marginTop="5dp"
     android:scaleX="0.75"
     android:scaleY="0.75"
-    app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
-    app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+    app:layout_constraintEnd_toStartOf="@+id/textTextTextPasswordRegister"
+    app:layout_constraintTop_toBottomOf="@+id/textViewEmailRegister"
     app:srcCompat="@drawable/padlock" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/textTextTextPasswordRegister"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:ems="10"
         android:hint=" password"
         android:inputType="textPassword"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewEmail"
-        app:layout_constraintStart_toStartOf="@+id/textViewEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewEmailRegister"
+        app:layout_constraintStart_toStartOf="@+id/textViewEmailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailRegister" />
 
 <ImageView
     android:id="@+id/imageViewPassword2"
@@ -92,21 +92,21 @@ tools:context=".RegisterActivity">
     android:layout_marginTop="5dp"
     android:scaleX="0.75"
     android:scaleY="0.75"
-    app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword2"
-    app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+    app:layout_constraintEnd_toStartOf="@+id/textTextTextPasswordConfirmation"
+    app:layout_constraintTop_toBottomOf="@+id/textTextTextPasswordRegister"
     app:srcCompat="@drawable/padlock" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/textTextTextPasswordConfirmation"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:ems="10"
         android:hint=" confirm password"
         android:inputType="textPassword"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/textTextTextPasswordRegister"
+        app:layout_constraintStart_toStartOf="@+id/textTextTextPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textTextTextPasswordRegister" />
 
     <TextView
         android:id="@+id/signInText"
@@ -138,7 +138,7 @@ tools:context=".RegisterActivity">
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/signupButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
@@ -146,9 +146,9 @@ tools:context=".RegisterActivity">
         android:text="Sign up"
         android:textAllCaps="false"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textTextTextPasswordRegister"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintStart_toStartOf="@+id/textTextTextPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/textTextTextPasswordConfirmation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
