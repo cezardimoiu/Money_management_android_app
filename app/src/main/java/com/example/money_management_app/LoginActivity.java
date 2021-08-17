@@ -30,9 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText passwordText;
     public boolean isLogged;
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
-
     private FirebaseAuth mAuth;
 
     @Override
@@ -41,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
-        database = FirebaseDatabase.getInstance();
         emailText = (EditText) findViewById(R.id.textViewEmailLogin);
         passwordText = (EditText) findViewById(R.id.editTextTextPasswordLogin);
         signUpText = (TextView) findViewById(R.id.signUpText);
@@ -87,7 +83,6 @@ public class LoginActivity extends AppCompatActivity {
                         //Success
                         Toast.makeText(LoginActivity.this,
                                 "Login Successful", Toast.LENGTH_LONG).show();
-                        //TODO - load user info from database
                         isLogged = true;
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     }

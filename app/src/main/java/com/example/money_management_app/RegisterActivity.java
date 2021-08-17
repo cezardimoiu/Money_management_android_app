@@ -36,20 +36,6 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
 
 
-    final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    final DatabaseReference ref = database.getReference("users");
-
-    void addNewUser(String email) {
-        String username = email.split("@")[0];
-        user.resetUser();
-        user.setEmail(email);
-        user.setName(username);
-        DatabaseReference localRef = ref.child(username);
-        ref.child(username).setValue(user);
-
-    }
-
-
     private void register() {
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
@@ -69,7 +55,6 @@ public class RegisterActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(RegisterActivity.this,
                                         "Register successful, you may now log in", Toast.LENGTH_LONG).show();
-                                addNewUser(emailText.getEditableText().toString());
                             } else {
                                 Toast.makeText(RegisterActivity.this,
                                         "E-mail already in use or invalid", Toast.LENGTH_LONG).show();
@@ -92,8 +77,6 @@ public class RegisterActivity extends AppCompatActivity {
         passwordConfirmation = (EditText) findViewById(R.id.textTextTextPasswordConfirmation);
 
         registerButton = (AppCompatButton) findViewById(R.id.signupButton);
-
-
 
         mAuth = FirebaseAuth.getInstance();
 

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">FinnanzUp</string>
+
+    <string-array name="items">
+        <item>Select item</item>
+        <item>Transport</item>
+        <item>Groceries</item>
+        <item>House</item>
+        <item>Entertainment</item>
+        <item>Education</item>
+        <item>Donation</item>
+        <item>Economies</item>
+        <item>Investment</item>
+        <item>Other</item>
+
+    </string-array>
 </resources>
