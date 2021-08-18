@@ -8,9 +8,16 @@
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/borders.xml" value="0.3141025641025641" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_add.xml" value="0.2074561403508772" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3141025641025641" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_education.xml" value="0.18205128205128204" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_entertainment.xml" value="0.18205128205128204" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_food.xml" value="0.18205128205128204" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_groceries.xml" value="0.3141025641025641" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3141025641025641" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_house.xml" value="0.18205128205128204" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3141025641025641" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.3141025641025641" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_other.xml" value="0.18205128205128204" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/ic_transport.xml" value="0.18205128205128204" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/drawable/rounded_corners.xml" value="0.3141025641025641" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/activity_budget.xml" value="0.25" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/activity_login.xml" value="0.33" />
@@ -20,6 +27,8 @@
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/fragment_home.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/fragment_notifications.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/input_layout.xml" value="0.1893162393162393" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/retrieve_layout.xml" value="0.25" />
+        <entry key="..\:/Users/cezar/Desktop/Money-management-app/app/src/main/res/layout/update_layout.xml" value="0.30085470085470084" />
       </map>
     </option>
   </component>
