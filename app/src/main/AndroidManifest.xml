@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Moneymanagementapp">
+        <activity
+            android:name=".TodaySpendingActivity"
+            android:exported="true" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,24 +21,25 @@
         </activity>
         <activity android:name=".RegisterActivity">
             <intent-filter>
-                <action android:name="com.example.money-management-app.RegisterActivity"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.example.money-management-app.RegisterActivity" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="com.example.money-managemement-app.MainActivity"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.example.money-managemement-app.MainActivity" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".BudgetActivity">
             <intent-filter>
-                <action android:name="com.example.money-managemement-app.BudgetActivity"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.example.money-managemement-app.BudgetActivity" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

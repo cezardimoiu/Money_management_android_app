@@ -1,5 +1,8 @@
 package com.example.money_management_app;
 
+import static com.example.money_management_app.MainActivity.url_firebase;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -17,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,7 +39,6 @@ import com.google.firebase.database.ValueEventListener;
 import org.joda.time.DateTime;
 import org.joda.time.Months;
 import org.joda.time.MutableDateTime;
-import org.w3c.dom.Text;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -44,11 +47,12 @@ import java.util.Calendar;
 public class BudgetActivity extends AppCompatActivity {
 
     private TextView totalBudgetAmountTextView;
-    private RecyclerView recycleView;
+    private RecyclerView recyclerView;
     private FloatingActionButton fab;
 
     public DatabaseReference budgetRef;
     private FirebaseAuth mAuth;
+    private Toolbar toolbar;
 
     private String post_key = "";
     private String item = "";
@@ -60,16 +64,20 @@ public class BudgetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_budget);
 
         mAuth = FirebaseAuth.getInstance();
-        budgetRef = FirebaseDatabase.getInstance("https://money-management-app-aae91-default-rtdb.europe-west1.firebasedatabase.app").getReference().child("budget").child(mAuth.getCurrentUser().getUid());
+        budgetRef = FirebaseDatabase.getInstance(url_firebase).getReference().child("budget").child(mAuth.getCurrentUser().getUid());
 
         totalBudgetAmountTextView = findViewById(R.id.totalBudgetAmountTextView);
-        recycleView = findViewById(R.id.recycleView);
+        recyclerView = findViewById(R.id.recyclerView);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Month Budget");
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         linearLayoutManager.setReverseLayout(true);
-        recycleView.setHasFixedSize(true);
-        recycleView.setLayoutManager(linearLayoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
         budgetRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -179,7 +187,7 @@ public class BudgetActivity extends AppCompatActivity {
 
         FirebaseRecyclerAdapter<Data, MyViewHolder> adapter = new FirebaseRecyclerAdapter<Data, MyViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Data model) {
+            protected void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Data model) {
                 holder.setItemAmount("Allocated amount: $" + model.getAmount());
                 holder.setDate("On: " + model.getDate());
                 holder.setItemName("Category: " + model.getItem());
@@ -238,19 +246,20 @@ public class BudgetActivity extends AppCompatActivity {
             }
         };
 
-        recycleView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         View myView;
         public ImageView imageView;
-        public TextView notes;
+        public TextView notes, date;
         public MyViewHolder (View itemView) {
             super(itemView);
             myView = itemView;
-            imageView = itemView.findViewById(R.id.house);
+            imageView = itemView.findViewById(R.id.imageView);
             notes = itemView.findViewById(R.id.note);
+            date = itemView.findViewById(R.id.date);
         }
 
         public void setItemName (String itemName) {
@@ -310,7 +319,7 @@ public class BudgetActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(BudgetActivity.this, "Budget item added successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BudgetActivity.this, "Budget item updated successfully", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 
@@ -329,7 +338,7 @@ public class BudgetActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(BudgetActivity.this, "Budget item added successfully", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BudgetActivity.this, "Budget item deleted successfully", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(BudgetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
 

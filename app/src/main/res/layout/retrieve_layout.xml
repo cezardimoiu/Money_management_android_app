@@ -52,13 +52,15 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_toEndOf="@id/linearLayout"
-            android:id="@+id/house"
-            android:src="@drawable/ic_house">
-        </ImageView>
+            android:src="@drawable/ic_house"></ImageView>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
