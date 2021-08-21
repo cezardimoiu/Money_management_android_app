@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.joda.time.DateTime;
 import org.joda.time.Months;
 import org.joda.time.MutableDateTime;
+import org.joda.time.Weeks;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -63,7 +64,6 @@ public class TodayItemsAdapter extends RecyclerView.Adapter<TodayItemsAdapter.Vi
         holder.date.setText("On: " + data.getDate());
         holder.notes.setText("Note: " + data.getNotes());
 
-        System.out.println("morra:" + data.getItem());
 
         switch(data.getItem()) {
             case "Transport":
@@ -146,9 +146,10 @@ public class TodayItemsAdapter extends RecyclerView.Adapter<TodayItemsAdapter.Vi
                 MutableDateTime epoch = new MutableDateTime();
                 epoch.setDate(0);
                 DateTime now = new DateTime();
+                Weeks weeks = Weeks.weeksBetween(epoch, now);
                 Months months = Months.monthsBetween(epoch, now);
 
-                Data data = new Data(item, date, post_key, note, amount, months.getMonths());
+                Data data = new Data(item, date, post_key, note, amount, months.getMonths(), weeks.getWeeks());
 
                 DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 reference.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
