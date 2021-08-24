@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DailyAnalyticsActivity">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -23,15 +21,15 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <TextView
-        android:id="@+id/totalAmountSpentOn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TotalAmount: $0"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_margin="5dp" />
+            android:id="@+id/totalAmountSpentOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TotalAmount: $0"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_margin="5dp" />
 
         <LinearLayout
             android:layout_gravity="center_vertical"
@@ -151,7 +149,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -219,7 +217,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -283,7 +281,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -348,7 +346,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -413,7 +411,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -478,7 +476,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -542,7 +540,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -607,7 +605,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -671,7 +669,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -736,7 +734,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textColor="#000"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -810,7 +808,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Today"
+                            android:text="This month"
                             android:textSize="12sp"
                             android:textColor="#000" />
                     </LinearLayout>
@@ -819,7 +817,7 @@
                         android:layout_toEndOf="@+id/linearLayout10"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/today"
+                        android:src="@drawable/month"
                         android:layout_margin="10dp"/>
 
                 </RelativeLayout>
@@ -828,4 +826,5 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
+
 </LinearLayout>

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moneymanagementapp">
         <activity
+            android:name=".MonthlyAnalyticsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WeeklyAnalyticsActivity"
+            android:exported="true" />
+        <activity
             android:name=".ChooseAnalyticsActivity"
             android:exported="true" />
         <activity
