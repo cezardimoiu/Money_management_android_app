@@ -4,7 +4,6 @@ package com.example.money_management_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -17,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView todayCardView;
     private CardView weekCardView;
     private CardView monthCardView;
+    private CardView analyticsCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         todayCardView = findViewById(R.id.todayCardView);
         weekCardView = findViewById(R.id.weekCardView);
         monthCardView = findViewById(R.id.monthCardView);
+        analyticsCardView = findViewById(R.id.analyticsCardView);
 
         budgetCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WeekSpendingActivity.class);
                 intent.putExtra("type", "month");
+                startActivity(intent);
+            }
+        });
+
+        analyticsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ChooseAnalyticsActivity.class);
                 startActivity(intent);
             }
         });

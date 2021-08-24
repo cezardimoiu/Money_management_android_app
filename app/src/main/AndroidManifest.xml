@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moneymanagementapp">
         <activity
+            android:name=".ChooseAnalyticsActivity"
+            android:exported="true" />
+        <activity
             android:name=".WeekSpendingActivity"
             android:exported="true" />
         <activity
             android:name=".TodaySpendingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DailyAnalyticsActivity"
             android:exported="true" />
         <activity android:name=".LoginActivity">
             <intent-filter>
