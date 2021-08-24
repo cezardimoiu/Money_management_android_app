@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private CardView budgetCardView;
     private CardView todayCardView;
     private CardView weekCardView;
+    private CardView monthCardView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         budgetCardView = findViewById(R.id.bugdetCardView);
         todayCardView = findViewById(R.id.todayCardView);
         weekCardView = findViewById(R.id.weekCardView);
+        monthCardView = findViewById(R.id.monthCardView);
 
         budgetCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WeekSpendingActivity.class);
+                intent.putExtra("type", "week");
+
+                startActivity(intent);
+            }
+        });
+
+        monthCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeekSpendingActivity.class);
+                intent.putExtra("type", "month");
                 startActivity(intent);
             }
         });
