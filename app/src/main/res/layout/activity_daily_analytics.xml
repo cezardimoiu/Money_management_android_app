@@ -136,6 +136,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
+                                android:id="@+id/progress_ratio_transport"
                                 android:text="status"
                                 android:textColor="#000"
                                 android:textSize="12sp"
@@ -205,6 +206,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_groceries"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -269,6 +271,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_house"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -334,6 +337,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_entertainment"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -399,6 +403,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_education"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -464,6 +469,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_donation"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -528,6 +534,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_personal"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -593,6 +600,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_economies"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -657,6 +665,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_investment"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -722,6 +731,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:text="status"
+                                android:id="@+id/progress_ratio_other"
                                 android:textColor="#000"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />

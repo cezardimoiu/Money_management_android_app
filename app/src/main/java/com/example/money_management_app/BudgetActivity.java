@@ -150,7 +150,11 @@ public class BudgetActivity extends AppCompatActivity {
                     Weeks weeks = Weeks.weeksBetween(epoch, now);
                     Months months = Months.monthsBetween(epoch, now);
 
-                    Data data = new Data(budgetItem, date, id, null, Integer.parseInt(budgetAmount), months.getMonths(), weeks.getWeeks());
+                    String itemDay = budgetItem + date;
+                    String itemWeek = budgetItem + weeks.getWeeks();
+                    String itemMonth = budgetItem + months.getMonths();
+
+                    Data data = new Data(budgetItem, date, id, itemDay, itemWeek, itemMonth, Integer.parseInt(budgetAmount), months.getMonths(), weeks.getWeeks(), null);
                     budgetRef.child(id).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -317,7 +321,12 @@ public class BudgetActivity extends AppCompatActivity {
                 Weeks weeks = Weeks.weeksBetween(epoch, now);
                 Months months = Months.monthsBetween(epoch, now);
 
-                Data data = new Data(item, date, post_key, null, amount, months.getMonths(), weeks.getWeeks());
+                String itemDay = item + date;
+                String itemWeek = item + weeks.getWeeks();
+                String itemMonth = item + months.getMonths();
+
+                Data data = new Data(item, date, post_key, itemDay, itemWeek, itemMonth, amount, months.getMonths(), weeks.getWeeks(), null);
+
                 budgetRef.child(post_key).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

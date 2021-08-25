@@ -2,18 +2,21 @@ package com.example.money_management_app;
 
 public class Data {
 
-    String item, date, id, notes;
+    String item, date, id, notes, itemDay, itemWeek, itemMonth;
     int amount, month, week;
 
     public Data() {
 
     }
 
-    public Data(String item, String date, String id, String notes, int amount, int month, int week) {
+    public Data(String item, String date, String id, String itemDay, String itemWeek, String itemMonth, int amount, int month, int week, String notes) {
         this.item = item;
         this.date = date;
         this.id = id;
         this.notes = notes;
+        this.itemDay = itemDay;
+        this.itemWeek = itemWeek;
+        this.itemMonth = itemMonth;
         this.amount = amount;
         this.month = month;
         this.week = week;
@@ -49,6 +52,30 @@ public class Data {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getItemDay() {
+        return itemDay;
+    }
+
+    public void setItemDay(String itemDay) {
+        this.itemDay = itemDay;
+    }
+
+    public String getItemWeek() {
+        return itemWeek;
+    }
+
+    public void setItemWeek(String itemWeek) {
+        this.itemWeek = itemWeek;
+    }
+
+    public String getItemMonth() {
+        return itemMonth;
+    }
+
+    public void setItemMonth(String itemMonth) {
+        this.itemMonth = itemMonth;
     }
 
     public int getAmount() {
