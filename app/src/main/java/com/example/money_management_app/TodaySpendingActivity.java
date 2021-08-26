@@ -69,7 +69,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
         recyclerView = findViewById(R.id.recyclerView);
-        totalAmountSpentOn = findViewById(R.id.totalAmountSpentOn);
+        totalAmountSpentOn = findViewById(R.id.totalBudgetAmountTextView);
         fab = findViewById(R.id.fab);
 
         mAuth = FirebaseAuth.getInstance();
