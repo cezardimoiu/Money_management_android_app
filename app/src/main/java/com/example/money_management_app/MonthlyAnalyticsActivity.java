@@ -52,12 +52,13 @@ public class MonthlyAnalyticsActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         onlineUserId = mAuth.getCurrentUser().getUid();
         expenseRef = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
-        expenseRef = FirebaseDatabase.getInstance(url_firebase).getReference("personal").child(onlineUserId);
+        personalRef = FirebaseDatabase.getInstance(url_firebase).getReference("personal").child(onlineUserId);
 
         totalBudgetAmountTextView = findViewById(R.id.totalBudgetAmountTextView);
         linearLayoutAnalysis = findViewById(R.id.linearLayoutAnalysis);
         monthRatioSpending = findViewById(R.id.monthRatioSpending);
         monthRatioSpending_Image = findViewById(R.id.monthRatioSpending_Image);
+        monthSpentAmount = findViewById(R.id.monthSpentAmount);
 
 //textViews
         progress_ratio_transport = findViewById(R.id.progress_ratio_transport);
