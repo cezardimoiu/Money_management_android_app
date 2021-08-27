@@ -65,7 +65,10 @@ public class TodaySpendingActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Today Spending");
+        getSupportActionBar().setTitle("Today spending");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         progressBar = findViewById(R.id.progressBar);
         recyclerView = findViewById(R.id.recyclerView);
@@ -123,7 +126,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalAmountSpentOn.setText("Total Day's Spending: " + totalAmount + " lei");
+                    totalAmountSpentOn.setText("Total day's spending: " + totalAmount + " lei");
                 }
             }
 
@@ -163,16 +166,14 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (itemSpinner.equals("Select item")) {
-                    Toast.makeText(TodaySpendingActivity.this, "Select a valid item", Toast.LENGTH_SHORT).show();
-                }
-
                 if (TextUtils.isEmpty(Note)) {
                     note.setError("Note is required");
                     return;
                 }
 
-                else {
+                if (Item.equals("Select item")) {
+                    Toast.makeText(TodaySpendingActivity.this, "Select a valid item", Toast.LENGTH_LONG).show();
+                } else {
                     String id = expensesRef.push().getKey();
                     DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
                     Calendar calendar = Calendar.getInstance();

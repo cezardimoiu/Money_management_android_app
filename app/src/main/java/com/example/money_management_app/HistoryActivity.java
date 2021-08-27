@@ -103,7 +103,7 @@ public class HistoryActivity extends AppCompatActivity implements DatePickerDial
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 myDataList.clear();
-                for (DataSnapshot snapshot :dataSnapshot.getChildren()){
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Data data = snapshot.getValue(Data.class);
                     myDataList.add(data);
                 }
@@ -111,6 +111,11 @@ public class HistoryActivity extends AppCompatActivity implements DatePickerDial
                 recyclerView.setVisibility(View.VISIBLE);
 
                 int totalAmount = 0;
+
+                if (dataSnapshot.getChildrenCount() == 0) {
+                    historyTotalAmountSpent.setVisibility(View.VISIBLE);
+                    historyTotalAmountSpent.setText("On " + date + " you've spent: 0 lei");
+                }
                 for (DataSnapshot ds : dataSnapshot.getChildren()){
                     Map<String, Object> map = (Map<String, Object>)ds.getValue();
                     Object total = map.get("amount");
@@ -123,8 +128,8 @@ public class HistoryActivity extends AppCompatActivity implements DatePickerDial
                         historyTotalAmountSpent.setVisibility(View.VISIBLE);
                         historyTotalAmountSpent.setText("On " + date + " you've spent: 0 lei");
                     }
-
                 }
+
             }
 
             @Override

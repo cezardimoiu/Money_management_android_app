@@ -70,7 +70,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
         setSupportActionBar(settingsToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Today Analytics");
+        getSupportActionBar().setTitle("Today analytics");
 
         monthSpentAmount = findViewById(R.id.monthSpentAmount);
 

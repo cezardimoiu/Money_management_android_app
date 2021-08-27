@@ -762,6 +762,7 @@
 
                 <com.anychart.AnyChartView
                     android:id="@+id/anyChartView"
+                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="600dp"/>
 

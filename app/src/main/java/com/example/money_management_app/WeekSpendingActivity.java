@@ -55,7 +55,10 @@ public class WeekSpendingActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Week Spending");
+        getSupportActionBar().setTitle("Week spending");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         totalWeekAmountTextView = findViewById(R.id.totalWeekAmountTextView);
         progressBar = findViewById(R.id.progressBar);
         recyclerView = findViewById(R.id.recyclerView);
@@ -113,7 +116,7 @@ public class WeekSpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalWeekAmountTextView.setText("Total Month's Spending: $" + totalAmount);
+                    totalWeekAmountTextView.setText("Total month's spending: " + totalAmount + " lei");
                 }
             }
 
@@ -154,7 +157,7 @@ public class WeekSpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalWeekAmountTextView.setText("Total Week's Spending: $" + totalAmount);
+                    totalWeekAmountTextView.setText("Total week's spending: " + totalAmount + " lei");
                 }
             }
 

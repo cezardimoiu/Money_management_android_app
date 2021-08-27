@@ -72,7 +72,7 @@ public class WeeklyAnalyticsActivity extends AppCompatActivity {
         setSupportActionBar(settingsToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Weekly Analytics");
+        getSupportActionBar().setTitle("Weekly analytics");
 
         mAuth = FirebaseAuth.getInstance();
         onlineUserId = mAuth.getCurrentUser().getUid();
@@ -696,7 +696,7 @@ public class WeeklyAnalyticsActivity extends AppCompatActivity {
 
                     pie.data(data);
 
-                    pie.title("Week Analytics");
+                    pie.title("Week analytics");
 
                     pie.labels().position("outside");
 
