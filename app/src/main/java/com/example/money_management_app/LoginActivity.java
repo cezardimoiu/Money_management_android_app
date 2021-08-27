@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextView signUpText;
     private Button loginButton;
-    public User user = User.getInstance();
     private EditText emailText;
     private EditText passwordText;
     public boolean isLogged;
@@ -61,8 +60,6 @@ public class LoginActivity extends AppCompatActivity {
             isLogged = false;
         }
 
-
-        User user = User.getInstance();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

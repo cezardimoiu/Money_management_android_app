@@ -587,8 +587,8 @@ public class MonthlyAnalyticsActivity extends AppCompatActivity {
                         totalAmount += pTotal;
 
                     }
-                    totalBudgetAmountTextView.setText("Total month's spending: $" + totalAmount);
-                    monthSpentAmount.setText("Total Spent: $" + totalAmount);
+                    totalBudgetAmountTextView.setText("Total month's spending: " + totalAmount + " lei");
+                    monthSpentAmount.setText("Total Spent: " + totalAmount + " lei");
                 }
                 else {
                     totalBudgetAmountTextView.setText("You've not spent any money this month");

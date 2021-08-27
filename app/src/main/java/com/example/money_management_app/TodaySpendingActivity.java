@@ -123,7 +123,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
 
-                    totalAmountSpentOn.setText("Total Day's Spending: $" + totalAmount);
+                    totalAmountSpentOn.setText("Total Day's Spending: " + totalAmount + " lei");
                 }
             }
 
@@ -163,7 +163,7 @@ public class TodaySpendingActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (Item.equals("Select item")) {
+                if (itemSpinner.equals("Select item")) {
                     Toast.makeText(TodaySpendingActivity.this, "Select a valid item", Toast.LENGTH_SHORT).show();
                 }
 

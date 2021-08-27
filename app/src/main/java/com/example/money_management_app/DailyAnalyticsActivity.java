@@ -188,6 +188,8 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutTransport.setVisibility(View.GONE);
+                    personalRef.child("dayTransport").setValue(0);
+
                 }
             }
 
@@ -227,6 +229,8 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutGroceries.setVisibility(View.GONE);
+                    personalRef.child("dayGroceries").setValue(0);
+
                 }
             }
 
@@ -266,6 +270,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutHouse.setVisibility(View.GONE);
+                    personalRef.child("dayHouse").setValue(0);
                 }
             }
 
@@ -305,6 +310,8 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutEntertainment.setVisibility(View.GONE);
+                    personalRef.child("dayEntertainment").setValue(0);
+
                 }
             }
 
@@ -344,6 +351,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutEducation.setVisibility(View.GONE);
+                    personalRef.child("dayEducation").setValue(0);
                 }
             }
 
@@ -362,7 +370,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         Calendar cal = Calendar.getInstance();
         String date = dateFormat.format(cal.getTime());
-        String itemDay = "Donation"+date;
+        String itemDay = "Donation" + date;
 
         DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
         Query query = reference.orderByChild("itemDay").equalTo(itemDay);
@@ -383,6 +391,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutDonation.setVisibility(View.GONE);
+                    personalRef.child("dayDonation").setValue(0);
                 }
             }
 
@@ -422,6 +431,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutPersonal.setVisibility(View.GONE);
+                    personalRef.child("dayPersonal").setValue(0);
                 }
             }
 
@@ -461,6 +471,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutEconomies.setVisibility(View.GONE);
+                    personalRef.child("dayEconomies").setValue(0);
                 }
             }
 
@@ -500,6 +511,7 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutInvestment.setVisibility(View.GONE);
+                    personalRef.child("dayInvestment").setValue(0);
                 }
             }
 
@@ -539,6 +551,8 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                 }
                 else {
                     relativeLayoutOther.setVisibility(View.GONE);
+                    personalRef.child("dayOther").setValue(0);
+
                 }
             }
 
@@ -568,8 +582,8 @@ public class DailyAnalyticsActivity extends AppCompatActivity {
                         totalAmount+=pTotal;
 
                     }
-                    totalBudgetAmountTextView.setText("Total day's spending: $ " + totalAmount);
-                    monthSpentAmount.setText("Total Spent: $ " + totalAmount);
+                    totalBudgetAmountTextView.setText("Total day's spending: " + totalAmount + " lei");
+                    monthSpentAmount.setText("Total Spent: " + totalAmount + " lei");
                 }
                 else {
                     totalBudgetAmountTextView.setText("You've not spent any money today");

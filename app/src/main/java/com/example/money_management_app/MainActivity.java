@@ -3,6 +3,9 @@ package com.example.money_management_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,9 +36,9 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static String url_firebase = "https://money-management-app-aae91-default-rtdb.europe-west1.firebasedatabase.app";
+    public static final String url_firebase = "https://money-management-app-aae91-default-rtdb.europe-west1.firebasedatabase.app";
 
-    private CardView budgetCardView, todayCardView, weekCardView, monthCardView, analyticsCardView;
+    private CardView budgetCardView, todayCardView, weekCardView, monthCardView, analyticsCardView, historyCardView;
 
 
     private Toolbar toolbar;
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         weekCardView = findViewById(R.id.weekCardView);
         monthCardView = findViewById(R.id.monthCardView);
         analyticsCardView = findViewById(R.id.analyticsCardView);
+        historyCardView = findViewById(R.id.historyCardView);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -120,6 +124,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        historyCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
         budgetRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -166,11 +178,11 @@ public class MainActivity extends AppCompatActivity {
                         Object total = map.get("amount");
                         int pTotal = Integer.parseInt(String.valueOf(total));
                         totalAmountBudget += pTotal;
-                        budgetTv.setText("$ " + String.valueOf(totalAmountBudget));
+                        budgetTv.setText("" + String.valueOf(totalAmountBudget) + " lei");
                     }
                 }else {
                     totalAmountBudget=0;
-                    budgetTv.setText("$ " + String.valueOf(0));
+                    budgetTv.setText("" + String.valueOf(0) + " lei");
                 }
             }
 
@@ -201,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     int savings = budget - monthSpending;
-                    savingsTv.setText("$ " + savings);
+                    savingsTv.setText("" + savings + " lei");
 
                 }
             }
@@ -229,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                     Object total = map.get("amount");
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
-                    todayTv.setText("$ "+ totalAmount);
+                    todayTv.setText("" + totalAmount + " lei");
                 }
                 personalRef.child("today").setValue(totalAmount);
             }
@@ -259,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
                     Object total = map.get("amount");
                     int pTotal = Integer.parseInt(String.valueOf(total));
                     totalAmount += pTotal;
-                    weekTv.setText("$ "+ totalAmount);
+                    weekTv.setText("" + totalAmount + " lei");
                 }
                 personalRef.child("week").setValue(totalAmount);
             }
@@ -287,8 +299,8 @@ public class MainActivity extends AppCompatActivity {
                     Map<String, Object> map = (Map<String, Object>)ds.getValue();
                     Object total = map.get("amount");
                     int pTotal = Integer.parseInt(String.valueOf(total));
-                    totalAmount+=pTotal;
-                    monthTv.setText("$ "+ totalAmount);
+                    totalAmount += pTotal;
+                    monthTv.setText("" + totalAmount + " lei");
                 }
                 personalRef.child("month").setValue(totalAmount);
                 totalAmountMonth = totalAmount;
@@ -301,4 +313,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.account) {
+            Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

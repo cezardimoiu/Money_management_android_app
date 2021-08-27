@@ -31,7 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private AppCompatButton registerButton;
 
-    public User user = User.getInstance();
 
     FirebaseAuth mAuth;
 

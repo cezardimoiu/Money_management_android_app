@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+
     android:orientation="vertical">
 
     <TextView
@@ -80,7 +81,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginBottom="2dp"
-                android:backgroundTint="@color/bgcolor"
+                android:backgroundTint="@color/peach_nougat"
                 android:text="Update"
                 android:textAllCaps="false"
                 android:textColor="#000"

@@ -92,7 +92,7 @@ public class BudgetActivity extends AppCompatActivity {
                     for (DataSnapshot snap : snapshot.getChildren()) {
                         Data data = snap.getValue(Data.class);
                         totalAmount += data.getAmount();
-                        String sTotal = String.valueOf("month budget: $" + totalAmount);
+                        String sTotal = String.valueOf("Month budget: " + totalAmount + " lei");
                         totalBudgetAmountTextView.setText(sTotal);
                     }
 
@@ -562,7 +562,7 @@ public class BudgetActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Data, MyViewHolder> adapter = new FirebaseRecyclerAdapter<Data, MyViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull Data model) {
-                holder.setItemAmount("Allocated amount: $" + model.getAmount());
+                holder.setItemAmount("Allocated amount: " + model.getAmount() + " lei");
                 holder.setDate("On: " + model.getDate());
                 holder.setItemName("Category: " + model.getItem());
 
