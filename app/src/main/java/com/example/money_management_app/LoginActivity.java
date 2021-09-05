@@ -56,11 +56,6 @@ public class LoginActivity extends AppCompatActivity {
         signUpText = (TextView) findViewById(R.id.signUpText);
         loginButton = (Button) findViewById(R.id.loginButton);
 
-        if (mAuth.getCurrentUser() == null) {
-            isLogged = false;
-        }
-
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +81,6 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this,
                     "Enter E-mail and password", Toast.LENGTH_LONG).show();
         } else {
-            System.out.println(email + " " + password + "\n");
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -94,7 +88,6 @@ public class LoginActivity extends AppCompatActivity {
                         //Success
                         Toast.makeText(LoginActivity.this,
                                 "Login Successful", Toast.LENGTH_LONG).show();
-                        isLogged = true;
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                     }
 

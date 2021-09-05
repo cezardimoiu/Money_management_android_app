@@ -101,7 +101,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="0"
+                android:text="0 lei"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -114,7 +114,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="0"
+                android:text="0 lei"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -127,7 +127,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="0"
+                android:text="0 lei"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -140,7 +140,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="0"
+                android:text="0 lei"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -153,7 +153,7 @@
                 android:background="@drawable/borders"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="0"
+                android:text="0 lei"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 android:textStyle="bold" />
