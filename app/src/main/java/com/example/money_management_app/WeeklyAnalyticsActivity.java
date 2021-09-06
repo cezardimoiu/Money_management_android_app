@@ -971,10 +971,10 @@ public class WeeklyAnalyticsActivity extends AppCompatActivity {
                     }
 
                     float personalPercent = (personalTotal/personalRatio) * 100;
-                    if (personalPercent < 50){
+                    if (personalPercent < 50) {
                         progress_ratio_personal.setText(personalPercent + " %" + " used of " + personalRatio + ". Status:");
                         status_Image_personal.setImageResource(R.drawable.green);
-                    } else if (personalPercent >= 50 && personalPercent < 100){
+                    } else if (personalPercent >= 50 && personalPercent < 100) {
                         progress_ratio_personal.setText(personalPercent + " %" + " used of " + personalRatio + ". Status:");
                         status_Image_personal.setImageResource(R.drawable.brown);
                     } else {
@@ -983,10 +983,10 @@ public class WeeklyAnalyticsActivity extends AppCompatActivity {
                     }
 
                     float economiesPercent = (economiesTotal/economiesRatio) * 100;
-                    if (economiesPercent < 50){
+                    if (economiesPercent < 50) {
                         progress_ratio_economies.setText(economiesPercent + " %" + " used of "+ economiesRatio + ". Status:");
                         status_Image_economies.setImageResource(R.drawable.green);
-                    } else if (economiesPercent >= 50 && economiesPercent < 100){
+                    } else if (economiesPercent >= 50 && economiesPercent < 100) {
                         progress_ratio_economies.setText(economiesPercent + " %" + " used of "+ economiesRatio + ". Status:");
                         status_Image_economies.setImageResource(R.drawable.brown);
                     } else {
@@ -995,10 +995,10 @@ public class WeeklyAnalyticsActivity extends AppCompatActivity {
                     }
 
                     float investmentPercent = (investmentTotal/investmentRatio) * 100;
-                    if (investmentPercent < 50){
+                    if (investmentPercent < 50) {
                         progress_ratio_investment.setText(investmentPercent + " %" + " used of " + investmentRatio + " . Status:");
                         status_Image_investment.setImageResource(R.drawable.green);
-                    } else if (investmentPercent >= 50 && investmentPercent < 100){
+                    } else if (investmentPercent >= 50 && investmentPercent < 100) {
                         progress_ratio_investment.setText(investmentPercent + " %" + " used of " + investmentRatio + " . Status:");
                         status_Image_investment.setImageResource(R.drawable.brown);
                     } else {
@@ -1007,10 +1007,10 @@ public class WeeklyAnalyticsActivity extends AppCompatActivity {
                     }
 
                     float otherPercent = (otherTotal/otherRatio) * 100;
-                    if (otherPercent < 50){
+                    if (otherPercent < 50) {
                         progress_ratio_other.setText(otherPercent + " %" + " used of " + otherRatio + ". Status:");
                         status_Image_other.setImageResource(R.drawable.green);
-                    } else if (otherPercent >= 50 && otherPercent < 100){
+                    } else if (otherPercent >= 50 && otherPercent < 100) {
                         progress_ratio_other.setText(otherPercent + " %" + " used of " + otherRatio + ". Status:");
                         status_Image_other.setImageResource(R.drawable.brown);
                     } else {

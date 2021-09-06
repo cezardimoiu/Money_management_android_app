@@ -25,7 +25,7 @@
             android:id="@+id/totalBudgetAmountTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TotalAmount: $0"
+            android:text="Total amount: 0 lei"
             android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="bold"

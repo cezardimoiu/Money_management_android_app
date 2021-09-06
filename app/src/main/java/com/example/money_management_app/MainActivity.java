@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference budgetRef, expensesRef, personalRef;
-    private String onlineuserId = "";
+    private String onlineUserId = "";
 
     private int totalAmountMonth = 0;
     private int totalAmountBudget = 0;
@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
         savingsTv = findViewById(R.id.savingsTv);
 
         mAuth = FirebaseAuth.getInstance();
-        onlineuserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        budgetRef = FirebaseDatabase.getInstance(url_firebase).getReference("budget").child(onlineuserId);
-        expensesRef = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineuserId);
-        personalRef = FirebaseDatabase.getInstance(url_firebase).getReference("personal").child(onlineuserId);
+        onlineUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        budgetRef = FirebaseDatabase.getInstance(url_firebase).getReference("budget").child(onlineUserId);
+        expensesRef = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
+        personalRef = FirebaseDatabase.getInstance(url_firebase).getReference("personal").child(onlineUserId);
 
 
         budgetCardView.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
         budgetRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 if (snapshot.exists() && snapshot.getChildrenCount() > 0){
                     for (DataSnapshot ds :  snapshot.getChildren()){
                         Map<String, Object> map = (Map<String, Object>)ds.getValue();
@@ -147,12 +146,10 @@ public class MainActivity extends AppCompatActivity {
                     personalRef.child("budget").setValue(totalAmountBudgetC);
                 } else {
                     personalRef.child("budget").setValue(0);
-                    Toast.makeText(MainActivity.this, "Please set a BUDGET in \'Categories\' section", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Please set a BUDGET in \'Categories\' section",
+                            Toast.LENGTH_LONG).show();
                 }
-
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -229,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         Calendar cal = Calendar.getInstance();
         String date = dateFormat.format(cal.getTime());
-        DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineuserId);
+        DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
         Query query = reference.orderByChild("date").equalTo(date);
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -260,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
         DateTime now = new DateTime();
         Weeks weeks = Weeks.weeksBetween(epoch, now);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineuserId);
+        DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
         Query query = reference.orderByChild("week").equalTo(weeks.getWeeks());
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -289,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
         DateTime now = new DateTime();
         Months months = Months.monthsBetween(epoch, now);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineuserId);
+        DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
         Query query = reference.orderByChild("month").equalTo(months.getMonths());
         query.addValueEventListener(new ValueEventListener() {
             @Override
