@@ -98,11 +98,7 @@ public class HistoryActivity extends AppCompatActivity implements DatePickerDial
         String date = dayOfMonth + "-" + "0" + months + "-" + year;
 
         DatabaseReference reference = FirebaseDatabase.getInstance(url_firebase).getReference("expenses").child(onlineUserId);
-        String new_date = "0";
-        if (dayOfMonth < 10) {
-            new_date += date;
-        }
-        Query query = reference.orderByChild("date").equalTo(new_date);
+        Query query = reference.orderByChild("date").equalTo(date);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
